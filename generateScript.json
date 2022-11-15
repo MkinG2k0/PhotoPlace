@@ -1,0 +1,16 @@
+{
+  "template": {
+    "slice": {
+      "folder": "./src/Redux/Slices",
+      "files": [
+        "./templates/slice/FileName.ExReducers.ts",
+        "./templates/slice/FileName.Get.ts",
+        "./templates/slice/FileName.Init.ts",
+        "./templates/slice/FileName.Model.ts",
+        "./templates/slice/FileName.Reducers.ts",
+        "./templates/slice/FileName.Slice.ts",
+        "./templates/slice/FileName.Thunk.ts"
+      ]
+    }
+  }
+}

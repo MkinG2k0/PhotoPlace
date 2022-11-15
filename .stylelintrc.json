@@ -1,0 +1,17 @@
+{
+  "customSyntax": "postcss-scss",
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-rational-order",
+    "stylelint-config-tailwindcss"
+  ],
+  "plugins": [
+    "stylelint-order",
+    "stylelint-scss"
+  ],
+  "tab": 1,
+  "space": "tab",
+  "rules": {
+    "*": "off"
+  }
+}
