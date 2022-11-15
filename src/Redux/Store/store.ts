@@ -1,4 +1,6 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit'
+import { Place } from 'Redux/Slices/Place/Place.Slice'
+import { User } from 'Redux/Slices/User/User.Slice'
 import {
 	FLUSH,
 	PAUSE,
@@ -11,7 +13,7 @@ import {
 } from 'redux-persist'
 import storage from 'redux-persist/lib/storage'
 
-const rootReducer = combineReducers({})
+const rootReducer = combineReducers({ User, Place })
 
 const persistConfig = {
 	key: 'root',
