@@ -3,8 +3,19 @@
 @tailwind utilities;
 
 body {
-	color: white;
 	background: #383838;
+}
+
+*::-webkit-scrollbar {
+	width: 8px; /* ширина scrollbar */
+}
+
+*::-webkit-scrollbar-track {
+	background: transparent; /* цвет дорожки */
+}
+
+*::-webkit-scrollbar-thumb {
+	background-color: #bbbbbf; /* цвет плашки */
 }
 
 * {

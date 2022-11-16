@@ -8,5 +8,6 @@ declare namespace R_Place {
 		images: any[]
 		videos: any[]
 		userId: string
+		address: string
 	}
 }

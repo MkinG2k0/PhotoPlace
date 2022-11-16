@@ -1,10 +1,9 @@
-import { NavLink } from 'react-router-dom'
-import { ROUTES } from 'Routes/Routes'
+import { PlaceInfo } from 'Components/PlaceInfo/PlaceInfo'
 
 function Main() {
 	return (
 		<div>
-			Main Page <NavLink to={ROUTES.ANY}>Nav Any page</NavLink>
+			<PlaceInfo />
 		</div>
 	)
 }
