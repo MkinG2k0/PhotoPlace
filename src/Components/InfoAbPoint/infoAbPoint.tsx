@@ -65,7 +65,21 @@ export const InfoAbPoint: FC<InfoAbPointProps> = ({}) => {
 					</div>
 				</div>
 
-				<div className={style.reviews}></div>
+				<div className={style.reviews}>
+					<div className={style.yourReviews}>
+						<input type="text" placeholder="Type your comment here" />
+						<button>Send</button>
+					</div>
+
+					<div className={style.usersReviews}>
+						<div className={style.users}>
+							<img className={style.usersAvatar} src="" alt="" />
+							<div className={style.usersName}>Kazanbi</div>
+						</div>
+
+						<div className={style.usersText}>Description</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	)
