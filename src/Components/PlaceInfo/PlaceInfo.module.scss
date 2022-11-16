@@ -87,6 +87,7 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		cursor: pointer;
 	}
 }
 
@@ -118,6 +119,7 @@
 }
 
 .yourReviews {
+	width: 100%;
 	position: relative;
 	left: 0;
 	top: 0;
@@ -125,8 +127,15 @@
 	border: 1px solid #c6c6c6;
 	border-radius: 7px;
 
-	input {
+	&:focus {
+		box-shadow: 0 0 0 .1rem mix.$color-fourth;
+	}
+
+	textarea {
 		position: absolute;
+		top: 0;
+		resize: none;
+		left: 0;
 		width: 80%;
 		height: 100%;
 		transition: .3s all;
@@ -134,8 +143,6 @@
 		font-weight: 400;
 		font-size: mix.$font-7;
 		line-height: mix.$font-6;
-		display: flex;
-		align-items: center;
 		border-radius: 7px;
 		color: #000000;
 		outline: none;
@@ -176,8 +183,8 @@
 		padding: .2rem .5rem;
 		border-radius: 12px;
 		font-weight: 400;
-		font-size: 15px;
-		line-height: 18px;
+		font-size: 1rem;
+		line-height: 1.3rem;
 
 		color: #FFFFFF;
 	}
@@ -191,5 +198,5 @@
 
 .usersText {
 	max-width: 100%;
-	margin-top: mix.$font-8;
+	margin-top: mix.$font-9;
 }

@@ -108,7 +108,7 @@ const Reviews = () => {
 	return (
 		<div className={style.reviews}>
 			<div className={style.yourReviews}>
-				<input type="text" placeholder="Type your comment here" />
+				<textarea placeholder="Type your comment here"></textarea>
 				<button>Send</button>
 			</div>
 
