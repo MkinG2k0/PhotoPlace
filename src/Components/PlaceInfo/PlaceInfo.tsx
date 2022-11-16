@@ -23,21 +23,7 @@ export const PlaceInfo: FC<InfoAbPointProps> = ({}) => {
 				<SwiperWrap />
 				<About />
 
-				<div className={style.reviews}>
-					<div className={style.yourReviews}>
-						<input type="text" placeholder="Type your comment here" />
-						<button>Send</button>
-					</div>
-
-					<div className={style.usersReviews}>
-						<div className={style.users}>
-							<img className={style.usersAvatar} src="" alt="" />
-							<div className={style.usersName}>Kazanbi</div>
-						</div>
-
-						<div className={style.usersText}>Description</div>
-					</div>
-				</div>
+				<Reviews />
 			</div>
 		</div>
 	)
@@ -83,7 +69,7 @@ const SwiperWrap = () => {
 	return (
 		<div className={style.emoji}>
 			<Swiper
-				slidesPerView={3}
+				slidesPerView={4}
 				spaceBetween={18}
 				loop={true}
 				freeMode={true}
@@ -114,6 +100,40 @@ const SwiperImg = () => {
 				src="https://reghotel.com/wp-content/uploads/2019/09/krasivie.jpg"
 				alt=""
 			/>
+		</div>
+	)
+}
+
+const Reviews = () => {
+	return (
+		<div className={style.reviews}>
+			<div className={style.yourReviews}>
+				<input type="text" placeholder="Type your comment here" />
+				<button>Send</button>
+			</div>
+
+			<ReviewsWrapper />
+			<ReviewsWrapper />
+			<ReviewsWrapper />
+		</div>
+	)
+}
+
+const ReviewsWrapper = () => {
+	return (
+		<div className={style.reviewsWrapper}>
+			<div className={style.usersReviews}>
+				<div className={style.users}>
+					<img
+						className={style.usersAvatar}
+						src="https://i.pinimg.com/736x/f5/27/41/f52741fb62bf1d821948a49204406bdc.jpg"
+						alt=""
+					/>
+					<div className={style.usersName}>Kazanbi Abdulaev</div>
+				</div>
+
+				<div className={style.usersText}>Description</div>
+			</div>
 		</div>
 	)
 }
