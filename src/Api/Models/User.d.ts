@@ -12,7 +12,7 @@ declare namespace Q_User {
 
 declare namespace R_User {
 	interface Base {
-		firsName: string
+		firstName: string
 		secondName: string
 		photo: string
 	}
