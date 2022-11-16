@@ -1,15 +1,14 @@
-import { Footer } from 'Components/Layout/Footer/Footer'
-import { Header } from 'Components/Layout/Header/Header'
 import { FC } from 'react'
+import {InfoAbPoint} from '../InfoAbPoint/infoAbPoint'
 
 import style from './Layout.module.scss'
 
 export const Layout: FC = ({ children }) => {
 	return (
 		<div className={style.wrap}>
-			<Header />
-			<div className={style.content}>{children}</div>
-			<Footer />
+			<div className={style.content}>
+				<InfoAbPoint />
+			</div>
 		</div>
 	)
 }
