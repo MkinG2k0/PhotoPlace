@@ -2,6 +2,8 @@ import 'swiper/css'
 
 import style from 'Components/PlaceInfo/PlaceInfo.module.scss'
 import { cn } from 'Helper/Helper'
+import { Arrow } from 'Icons/Arrow'
+import { Emoji } from 'Icons/Emoji'
 import { FC } from 'react'
 import { GetPlace } from 'Redux/Slices/Place/Place.Get'
 import { FreeMode, Pagination } from 'swiper'
@@ -19,7 +21,8 @@ export const PlaceInfo: FC<InfoAbPointProps> = ({}) => {
 			<SwiperImg />
 			<div className={style.content}>
 				<HeadTitle />
-
+				<Emoji.Angry />
+				<Arrow.Down />
 				<SwiperWrap />
 				<About />
 

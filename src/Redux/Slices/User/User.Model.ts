@@ -1,6 +1,6 @@
 export interface UserModel {
 	profile: {
-		firsName: string
+		firstName: string
 		secondName: string
 		photo: string
 	}

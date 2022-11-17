@@ -1,3 +1,3 @@
-import Angry from './Emoji/Instagram.svg'
+import Angry from './Emoji/Angry Face.svg'
 
 export const Emoji = { Angry }

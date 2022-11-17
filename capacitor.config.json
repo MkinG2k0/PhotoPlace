@@ -1,0 +1,16 @@
+{
+  "appId": "com.photoPlace.app",
+  "appName": "photoPlace",
+  "webDir": "dist",
+  "bundledWebRuntime": false,
+  "server": {},
+  "plugins": {
+    "PushNotifications": {
+      "presentationOptions": [
+        "badge",
+        "sound",
+        "alert"
+      ]
+    }
+  }
+}
