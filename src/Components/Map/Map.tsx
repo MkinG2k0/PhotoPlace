@@ -6,7 +6,8 @@ import { Map } from 'react-map-gl'
 import style from './Map.module.scss'
 
 const MAPBOX_ACCESS_TOKEN = import.meta.env.VITE_API_MAP || ''
-const MAP_STYLE = 'mapbox://styles/mking2k0/clal2hq99000l14quc4mbkzuy'
+const MAP_3D_STYLE = 'mapbox://styles/mking2k0/clal2hq99000l14quc4mbkzuy'
+const MAP_2D_STYLE = 'mapbox://styles/mking2k0/clal3pcmm004k14ntvixihrg9'
 
 const INITIAL_VIEW_STATE = {
 	longitude: 47.505,
@@ -34,7 +35,7 @@ export const MapWrap: FC = () => {
 				controller={true}
 				layers={layers}
 			>
-				<Map mapboxAccessToken={MAPBOX_ACCESS_TOKEN} mapStyle={MAP_STYLE} />
+				<Map mapboxAccessToken={MAPBOX_ACCESS_TOKEN} mapStyle={MAP_3D_STYLE} />
 			</DeckGL>
 		</div>
 	)
