@@ -2,8 +2,8 @@ import 'swiper/css'
 
 import style from 'Components/PlaceInfo/PlaceInfo.module.scss'
 import { cn } from 'Helper/Helper'
-import { Arrow } from 'Icons/Arrow'
 import { Emoji } from 'Icons/Emoji'
+import { Opportunities } from 'Icons/opportunities'
 import { FC } from 'react'
 import { GetPlace } from 'Redux/Slices/Place/Place.Get'
 import { FreeMode, Pagination } from 'swiper'
@@ -21,8 +21,6 @@ export const PlaceInfo: FC<InfoAbPointProps> = ({}) => {
 			<SwiperImg />
 			<div className={style.content}>
 				<HeadTitle />
-				<Emoji.Angry />
-				<Arrow.Down />
 				<SwiperWrap />
 				<About />
 
@@ -57,12 +55,19 @@ const HeadTitle = () => {
 		<div className={style.item}>
 			<div className={style.name}>
 				{title}
-				<span>{address}</span>
+				<span>
+					<Opportunities.Address />
+					{address}
+				</span>
 			</div>
 
 			<div className={style.opportunities}>
-				<div className={clShare}>П</div>
-				<div className={clLine}>Л</div>
+				<div className={clShare}>
+					<Opportunities.Share />
+				</div>
+				<div className={clLine}>
+					<Opportunities.Like />
+				</div>
 			</div>
 		</div>
 	)
@@ -82,15 +87,24 @@ const SwiperWrap = () => {
 				modules={[FreeMode, Pagination]}
 				className={style.mySwiper}
 			>
-				<SwiperSlide className={style.slider}>Slide 1</SwiperSlide>
-				<SwiperSlide className={style.slider}>Slide 2</SwiperSlide>
-				<SwiperSlide className={style.slider}>Slide 3</SwiperSlide>
-				<SwiperSlide className={style.slider}>Slide 4</SwiperSlide>
-				<SwiperSlide className={style.slider}>Slide 5</SwiperSlide>
-				<SwiperSlide className={style.slider}>Slide 6</SwiperSlide>
-				<SwiperSlide className={style.slider}>Slide 7</SwiperSlide>
-				<SwiperSlide className={style.slider}>Slide 8</SwiperSlide>
-				<SwiperSlide className={style.slider}>Slide 9</SwiperSlide>
+				<SwiperSlide className={style.slider}>
+					<Emoji.AngryFace />
+				</SwiperSlide>
+				<SwiperSlide className={style.slider}>
+					<Emoji.SmileFace />
+				</SwiperSlide>
+				<SwiperSlide className={style.slider}>
+					<Emoji.FaceScreaming />
+				</SwiperSlide>
+				<SwiperSlide className={style.slider}>
+					<Emoji.PensiveFace />
+				</SwiperSlide>
+				<SwiperSlide className={style.slider}>
+					<Emoji.BeamingFace />
+				</SwiperSlide>
+				<SwiperSlide className={style.slider}>
+					<Emoji.CryingFace />
+				</SwiperSlide>
 			</Swiper>
 		</div>
 	)
@@ -135,7 +149,7 @@ const ReviewsWrapper = () => {
 					<div className={style.usersName}>Kazanbi Abdulaev</div>
 				</div>
 
-				<div className={style.usersText}>Description</div>
+				<div className={style.usersText}>Descriptin</div>
 			</div>
 		</div>
 	)
