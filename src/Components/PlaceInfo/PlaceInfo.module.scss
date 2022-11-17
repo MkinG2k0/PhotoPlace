@@ -3,7 +3,6 @@
 
 .wrap {
 	width: 100%;
-	//max-width: 390px;
 	margin: 0 auto;
 	height: 100vh;
 	display: flex;
@@ -32,6 +31,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	flex-wrap: wrap;
 	gap: 1rem;
 
 	.name {
@@ -42,9 +42,11 @@
 		font-family: 'Montserrat', sans-serif;
 
 		span {
-			display: block;
+			display: flex;
+			align-items: center;
 			font-weight: 400;
 			font-size: mix.$font-5;
+			gap: mix.$font-9;
 			line-height: mix.$font-5;
 			color: #969696;
 			font-family: 'Montserrat', sans-serif;
@@ -65,6 +67,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		cursor: pointer;
 
 
 		&:not(:first-child) {
@@ -179,14 +182,10 @@
 
 	.usersName {
 		margin-left: 1rem;
-		background: mix.$color-fourth;
-		padding: .2rem .5rem;
-		border-radius: 12px;
+		border-bottom: 1px solid mix.$color-fourth;
 		font-weight: 400;
 		font-size: 1rem;
 		line-height: 1.3rem;
-
-		color: #FFFFFF;
 	}
 
 	img {
