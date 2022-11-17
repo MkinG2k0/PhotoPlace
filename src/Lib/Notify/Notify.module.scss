@@ -1,0 +1,67 @@
+@use '../../Style/mix';
+@use 'sass:math';
+
+.wrap {
+	position: fixed;
+	z-index: 1000;
+	padding: 1.5em;
+	transition: all 0.5s linear;
+
+	.notify {
+		display: flex;
+		flex-direction: column;
+		gap: 0.3em;
+		background: mix.$color-second;
+		width: 20em;
+		padding: 1rem;
+		border-radius: 0.5rem;
+		color: white;
+		@extend .f-4;
+	}
+}
+
+$names: left, right, top, bottom;
+
+@each $name in $names {
+	.#{$name} {
+		#{$name}: 0;
+	}
+}
+
+.letMove {
+	animation: 3s ease forwards move-left;
+}
+
+.rightMove {
+	animation: 3s ease forwards move-right;
+}
+
+@keyframes move-right {
+	0% {
+		right: -100%;
+	}
+	20% {
+		right: 0;
+	}
+	80% {
+		right: 0;
+	}
+	100% {
+		right: -100%;
+	}
+}
+
+@keyframes move-left {
+	0% {
+		left: -100%;
+	}
+	20% {
+		left: 0;
+	}
+	80% {
+		left: 0;
+	}
+	100% {
+		left: -100%;
+	}
+}

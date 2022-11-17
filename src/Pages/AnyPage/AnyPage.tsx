@@ -1,10 +1,10 @@
 import { NavLink } from 'react-router-dom'
-import { ROUTES } from 'Routes/Routes'
+import { NAV } from 'Routes/NAV'
 
 function AnyPage() {
 	return (
 		<div>
-			AnyPage <NavLink to={ROUTES.MAIN}>Main</NavLink>
+			AnyPage <NavLink to={NAV.MAIN}>Main</NavLink>
 		</div>
 	)
 }

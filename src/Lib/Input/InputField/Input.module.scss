@@ -1,0 +1,113 @@
+@use '../../../Style/mix';
+
+.input {
+	//background: mix.$color-base;
+	//caret-color: mix.$color-font-ui;
+	//color: mix.$color-font-ui;
+	box-shadow: 0 0 0 2px mix.$color-gray-checked;
+	//border: 0.15rem solid mix.$color-gray-checked;
+	border: none;
+	border-radius: 0.3rem;
+	transition: 0.5s all ease-in-out;
+	padding: 0.5rem 0.5rem;
+	background: mix.$color-gray;
+	display: block;
+	position: relative;
+	width: 100%;
+
+	&::placeholder {
+		//color: mix.$color-triple;
+	}
+
+	@extend .selector;
+
+	@include mix.hover();
+	//
+	@include mix.focus();
+}
+
+.selector {
+	&:disabled {
+		filter: grayscale(1);
+		opacity: 0.5;
+		cursor: not-allowed;
+	}
+
+	&::-webkit-calendar-picker-indicator {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		width: auto;
+		height: auto;
+		color: transparent;
+		background: transparent;
+		cursor: pointer;
+	}
+
+	&::-webkit-clear-button {
+		z-index: 1;
+	}
+
+	&::-webkit-outer-spin-button,
+	&::-webkit-inner-spin-button {
+		-webkit-appearance: none;
+		margin: 0;
+	}
+
+	// Range
+	&[type='range']:active {
+		&[type='range']::-webkit-slider-thumb {
+			filter: brightness(50%);
+		}
+	}
+
+	&[type='range']:disabled {
+		filter: grayscale(1);
+		opacity: 0.5;
+		cursor: not-allowed;
+	}
+
+	&[type='range'],
+	&[type='range']::-webkit-slider-runnable-track {
+		appearance: none !important;
+		cursor: pointer;
+
+		display: flex;
+		flex: 1;
+		margin: 0;
+		padding: 0;
+		width: 100%;
+	}
+
+	&[type='range']::-webkit-slider-thumb {
+		appearance: none !important;
+
+		background: mix.$color-second;
+		height: 1.2rem;
+		width: 1rem;
+	}
+
+	// color
+	&[type='color'] {
+		appearance: none !important;
+		display: block;
+		width: 100%;
+
+		background: none;
+		padding: 0;
+		margin: 0;
+		border: none;
+		cursor: pointer;
+	}
+
+	&::-webkit-color-swatch {
+		border-radius: 0.3rem;
+		border: none;
+		display: flex;
+		flex: 1;
+		padding: 0;
+		margin: 0;
+	}
+}

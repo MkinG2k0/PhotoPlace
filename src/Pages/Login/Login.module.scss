@@ -1,0 +1,82 @@
+@use "../../Style/mix";
+
+.wrap {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
+.abs {
+
+	position: absolute;
+	//background: #ccc;
+	width: 100%;
+	left: 0;
+	bottom: -100%;
+}
+
+.startAnim {
+	animation: 1.5s moveAbsIn forwards;
+
+}
+
+.outAnim {
+	animation: 1.5s moveAbsOut forwards;
+}
+
+.btn {
+	border-radius: .7rem;
+	background: white;
+	box-shadow: 0 0 0 2px mix.$color-gray;
+	transition: 0.5s all ease-in-out;
+}
+
+.close {
+	padding-bottom: 10rem;
+}
+
+.brands {
+	display: flex;
+	gap: 1rem;
+	width: 100%;
+
+	.brandBtn {
+		flex: 1 1;
+		padding: 1rem;
+		box-shadow: 0 0 0 2px mix.$color-gray;
+		border-radius: .5rem;
+	}
+}
+
+.lines {
+
+	display: flex;
+	gap: 1rem;
+	align-items: center;
+
+	.line {
+		flex: 1 1;
+		height: 2px;
+		background: mix.$color-gray;
+	}
+}
+
+
+@keyframes moveAbsIn {
+	0% {
+		bottom: -100%;
+	}
+	100% {
+		bottom: 0;
+	}
+}
+
+
+@keyframes moveAbsOut {
+	0% {
+		bottom: 0;
+	}
+	100% {
+		bottom: -110%;
+	}
+}

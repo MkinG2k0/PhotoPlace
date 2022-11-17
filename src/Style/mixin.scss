@@ -1,0 +1,50 @@
+@use 'color';
+
+//@mixin hover($color) {
+//  cursor: pointer;
+//  &:hover {
+//    background: $color;
+//  }
+//}
+
+@mixin labelColor($color) {
+	background: lighten($color, 25);
+	color: darken($color, 20);
+	padding: 0.2em 0.3em;
+	border-radius: 0.3em;
+}
+
+@mixin overFlowText() {
+	display: -webkit-box;
+	//-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+@mixin scroll() {
+	&::-webkit-scrollbar {
+		width: 1.1rem;
+	}
+	&::-webkit-scrollbar-track {
+		background: none;
+	}
+	&::-webkit-scrollbar-thumb {
+		background: color.$color-second;
+		border: 0.2rem solid color.$color-base;
+		border-radius: 1rem;
+	}
+}
+
+@mixin hover() {
+	&:hover {
+		box-shadow: 0 0.3rem color.$color-gray-checked;
+	}
+}
+
+@mixin focus() {
+	&:focus {
+		outline: none;
+		box-shadow: 0 0.3rem color.$color-gray-checked;
+	}
+}

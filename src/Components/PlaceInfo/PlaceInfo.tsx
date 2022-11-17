@@ -1,7 +1,5 @@
-import 'swiper/css'
-
 import style from 'Components/PlaceInfo/PlaceInfo.module.scss'
-import { cn } from 'Helper/Helper'
+import { cn } from 'Helper/helper'
 import { Emoji } from 'Icons/Emoji'
 import { Opportunities } from 'Icons/opportunities'
 import { FC } from 'react'

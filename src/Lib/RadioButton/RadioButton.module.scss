@@ -1,0 +1,48 @@
+@use '../../Style/mix';
+
+.wrap {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 1em;
+	background: mix.$color-base;
+
+	border-radius: 0.3rem;
+	padding: 0.5rem;
+	margin: 0;
+
+	@media (max-width: 400px) {
+		gap: 0.5rem;
+		.item {
+			font-size: 17px;
+		}
+	}
+
+	.item {
+		@extend .f-4;
+		display: flex;
+		align-items: center;
+		gap: 0.3rem;
+		color: white;
+		vertical-align: middle;
+		cursor: pointer;
+
+		&:hover {
+			.classD {
+				background: mix.$color-second;
+			}
+		}
+
+		.checked {
+			background: mix.$color-second;
+		}
+
+		.classD {
+			width: 1.2em;
+			height: 1.2em;
+			transition: 0.3s background-color;
+			box-shadow: 0 0 0 0.2em mix.$color-second inset;
+		}
+	}
+}

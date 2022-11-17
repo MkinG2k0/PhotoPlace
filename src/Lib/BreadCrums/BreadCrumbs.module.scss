@@ -1,0 +1,36 @@
+@use '../../Style/mix';
+
+.wrap {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+	padding: 0;
+	margin: 0;
+
+	.cram {
+		color: mix.$color-font;
+		cursor: pointer;
+		user-select: none;
+		transition: 0.3s color;
+		//@include mix.overFlowText;
+
+		&:hover {
+			color: mix.$color-second;
+		}
+	}
+
+	.slash {
+		color: mix.$color-gray-checked;
+	}
+
+	.wrapText {
+		display: flex;
+		align-content: center;
+	}
+
+	.slashChecked {
+		cursor: pointer;
+		color: mix.$color-second;
+	}
+}

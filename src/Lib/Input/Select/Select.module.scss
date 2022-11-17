@@ -1,0 +1,104 @@
+@use '../../../Style/mix';
+
+.choose {
+	//background: mix.$color-base;
+	//color: mix.$color-font-ui;
+	//caret-color: mix.$color-font-ui;
+
+	border: 0.15rem solid mix.$color-gray-checked;
+
+	border-radius: 0.3rem;
+	transition: 0.5s all ease-in-out;
+	padding: 0.3rem 0.5rem;
+
+	position: relative;
+	cursor: pointer;
+	user-select: none;
+	//border: none;
+	word-break: break-all;
+	//width: 100%;
+	justify-content: space-between;
+	background: white;
+	//@include mix.hover();
+	//
+	//@include mix.focus();
+
+	.text {
+		.input {
+			width: 0;
+			height: 0;
+			border: 0;
+			opacity: 0;
+		}
+	}
+}
+
+.leftBar {
+	position: absolute;
+	top: 50%;
+	right: 0;
+	transform: translateY(-50%);
+	margin-right: 0.5em;
+	display: flex;
+	gap: 0.5em;
+	align-items: center;
+
+	* {
+		fill: mix.$color-base;
+	}
+}
+
+.drop {
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	left: 0;
+	list-style: none;
+	background: mix.$color-base;
+
+	width: 100%;
+	margin: 0.8rem 0 0;
+	max-height: 10em;
+	box-shadow: 0 0.2rem 0.8rem 0.1rem mix.$color-second;
+	overflow-x: auto;
+	padding: 0.5rem 0;
+	transition: 0.2s all ease-in-out;
+	border-radius: 0.3rem;
+
+	z-index: 10;
+	opacity: 0;
+	top: 60%;
+
+	@include mix.scroll();
+
+	.item {
+		color: mix.$color-font-ui;
+
+		transition: 0.1s all ease-in-out;
+		padding: 0.3rem 0.5rem;
+		cursor: pointer;
+
+		&:hover {
+			background: mix.$color-second;
+		}
+	}
+
+	.manyItem {
+		border-radius: 0 0.5rem 0.5rem 0;
+	}
+}
+
+.open {
+	opacity: 1;
+	top: 100%;
+}
+
+.selectWrap {
+	width: 100%;
+}
+
+.btn {
+	* {
+		stroke: mix.$color-font-ui;
+	}
+}

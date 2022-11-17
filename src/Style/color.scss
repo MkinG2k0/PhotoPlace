@@ -1,0 +1,56 @@
+/* Color */
+
+$color-base: var(--color-base, #475284) !default;
+$color-second: var(--color-second, #2d3251) !default;
+$color-triple: var(--color-triple, #161625) !default;
+
+/* Dop */
+$color-bg: var(--color-bg, #232228) !default;
+$color-heading: var(--color-heading, #818cab) !default;
+
+/* Basic */
+
+$color-bl-1: #1f2233;
+$color-bl-2: #363d63;
+$color-bl-3: #475284;
+
+$color-shadow: rgba(0, 0, 0, 0.5);
+$color-gray: #e9e9e9;
+$color-gray-faint: #eaeaea;
+$color-gray-checked: #8e8e8e;
+
+$color-purple: #673ab7;
+$color-indigo: #3f51b5;
+$color-green: #4caf50;
+$color-pink: #ff3377;
+$color-blue: #00aaff;
+$color-orange: #ffbb33;
+$color-red: #ff3355;
+$color-green: #00ccaa;
+
+//
+$color-font: white !default;
+$color-font-ui: white !default;
+
+$theme: 'light' !default;
+
+//@if $theme == 'dark' {
+//	body {
+//		background: $color-bg;
+//		color: $color-font-ui;
+//	}
+//} @else {
+//	//$color-bg: white;
+//	$color-font: black;
+//
+//	body {
+//		background: #f4f4f4;
+//		color: $color-font;
+//	}
+//}
+
+$color-gray: #f4f4f4;
+$color-gray-checked: #ccc;
+$color-gray-strong: #858585;
+$color-orange: #fdc314;
+$color-indigo: #3f51b5;

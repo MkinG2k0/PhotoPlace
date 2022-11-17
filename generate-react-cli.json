@@ -21,11 +21,11 @@
         "component": "templates/page/TemplateName.tsx",
         "style": "templates/page/TemplateName.module.scss"
       },
-      "path": "src/Page",
+      "path": "src/Pages",
       "withStyle": true,
       "withTest": false,
       "withStory": false,
-      "withLazy": true
+      "withLazy": false
     },
     "slice": {
       "customTemplates": {

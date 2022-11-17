@@ -10,7 +10,16 @@
 		flex: 1 1;
 		flex-basis: 100%;
 		width: clamp(1rem, 100vw, 30rem);
+		height: 100%;
 		margin: 0 auto;
-		//padding: 0 clamp(1rem, 15vw, 5rem);
+		position: relative;
+
+		//@media (min-width: 600px) {
+		//	margin: 0;
+		//	width: 100%;
+		//}
+
 	}
+
+
 }

@@ -26,6 +26,15 @@
     "paths": {
       "@ReduxHelper": [
         "Redux/Helper/Helper"
+      ],
+      "@comp": [
+        "./Lib/Components"
+      ],
+      "@helper": [
+        "./Helper/helper"
+      ],
+      "@lib": [
+        "./Lib/Components"
       ]
     }
   },
