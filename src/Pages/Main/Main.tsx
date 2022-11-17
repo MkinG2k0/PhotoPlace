@@ -1,9 +1,10 @@
-import { PlaceInfo } from 'Components/PlaceInfo/PlaceInfo'
+import { MapWrap } from 'Components/Map/Map'
 
 function Main() {
 	return (
 		<div>
-			<PlaceInfo />
+			{/*<PlaceInfo />*/}
+			<MapWrap />
 		</div>
 	)
 }
