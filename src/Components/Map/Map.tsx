@@ -1,4 +1,4 @@
-import { PointCloudLayer } from '@deck.gl/layers'
+import { IconLayer } from '@deck.gl/layers'
 import DeckGL from 'deck.gl'
 import { FC } from 'react'
 import { Map } from 'react-map-gl'
@@ -16,17 +16,49 @@ const INITIAL_VIEW_STATE = {
 	pitch: 55,
 	bearing: 0
 }
-
+const ICON_MAPPING = {
+	marker: { x: 0, y: 0, width: 29, height: 34, mask: false }
+}
 const data = [
 	{ position: [47.505, 42.976476] },
 	{ position: [47.505, 42.946476] },
 	{ position: [47.525, 42.946476] }
 ]
 
+const data2 = [
+	{
+		name: 'Colma (COLM)',
+		address: '365 D Street, Colma CA 94014',
+		exits: 4214,
+		coordinates: [47.505, 42.976476]
+	},
+	{
+		name: 'Colma (COLM)',
+		address: '365 D Street, Colma CA 94014',
+		exits: 4214,
+		coordinates: [47.505, 42.946476]
+	},
+	{
+		name: 'Colma (COLM)',
+		address: '365 D Street, Colma CA 94014',
+		exits: 4214,
+		coordinates: [47.525, 42.946476]
+	}
+]
+
 export const MapWrap: FC = () => {
-	const layers = [
-		new PointCloudLayer({ id: 'point-layer', data, radiusPixels: 4 })
-	]
+	const layers = new IconLayer({
+		id: 'icon-layer',
+		data: data2,
+		pickable: true,
+		iconAtlas: '/point.svg',
+		iconMapping: ICON_MAPPING,
+		getIcon: (d) => 'marker',
+		sizeScale: 3,
+		getPosition: (d) => d.coordinates,
+		getSize: (d) => 10,
+		getColor: (d) => [Math.sqrt(d.exits), 140, 0]
+	})
 
 	return (
 		<div className={style.wrap}>

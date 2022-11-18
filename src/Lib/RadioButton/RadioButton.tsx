@@ -31,7 +31,7 @@ export const RadioButton: FC<CheckBoxProps> = ({
 			<Map
 				Comp={CheckBoxItem}
 				data={data}
-				onClick={onCheckItem}
+				// onClick={onCheckItem}
 				props={{ checkedId }}
 			/>
 		</ul>

@@ -34,7 +34,7 @@ const Login: FC = () => {
 	}, [toggle])
 
 	const logIn = () => {
-		navigate(NAV.MAIN)
+		navigate(NAV.MAP)
 	}
 
 	const onClose = () => {

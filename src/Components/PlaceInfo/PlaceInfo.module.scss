@@ -2,6 +2,7 @@
 @use '../../Style/font';
 
 .wrap {
+
 	width: 100%;
 	margin: 0 auto;
 	height: 100vh;
@@ -140,7 +141,7 @@
 	border-radius: 7px;
 
 	&:focus {
-		box-shadow: 0 0 0 .1rem mix.$color-bl-4;
+		box-shadow: 0 0 0 .1rem mix.$color-gray-faint;
 	}
 
 	textarea {
@@ -166,7 +167,7 @@
 		top: 0;
 		height: 100%;
 		padding: 0 1.2rem;
-		background: mix.$color-bl-4;
+		background: mix.$color-gray-faint;
 		border-radius: 4px;
 
 		color: #fff;
@@ -180,7 +181,7 @@
 }
 
 .usersReviews {
-	border: 1.5px solid mix.$color-bl-4;
+	border: 1.5px solid mix.$color-gray-faint;
 	padding: .5rem;
 	border-radius: 12px;
 }
@@ -191,7 +192,7 @@
 
 	.usersName {
 		margin-left: 1rem;
-		border-bottom: 1px solid mix.$color-bl-4;
+		border-bottom: 1px solid mix.$color-gray-faint;
 		font-weight: 400;
 		font-size: 1rem;
 		line-height: 1.3rem;

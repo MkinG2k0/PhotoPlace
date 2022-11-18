@@ -6,6 +6,7 @@ export const NAV = {
 	AUTH: '/auth',
 	LOGIN: '/login',
 	REGISTER: '/register',
+	MAP: '/map',
 	GOOGLE: '/'
 }
 
@@ -29,5 +30,9 @@ export const components = [
 	{
 		path: NAV.LOGIN,
 		Component: lazy(() => import('Pages/Login/Login'))
+	},
+	{
+		path: NAV.MAP,
+		Component: lazy(() => import('Pages/Map/Map'))
 	}
 ]

@@ -100,7 +100,7 @@ export const Select: FC<SelectProps> = ({
 					<div className={style.leftBar}>
 						{value && (
 							<Button
-								Before={<Arrow.Close />}
+								// Before={<Arrow.Close />}
 								type={'square'}
 								status={'primary'}
 								fontSize={2}

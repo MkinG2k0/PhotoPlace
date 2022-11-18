@@ -1,15 +1,15 @@
-import { MapWrap } from 'Components/Map/Map'
-import { PlaceInfo } from 'Components/PlaceInfo/PlaceInfo'
-import { Draggable } from 'Components/Draggable/Draggable'
+import { useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { NAV } from 'Routes/NAV'
 
 function Main() {
-	return (
-		<div>
-			<Draggable />
-			{/*<PlaceInfo />*/}
-			{/*<MapWrap />*/}
-		</div>
-	)
+	const navigate = useNavigate()
+
+	useEffect(() => {
+		navigate(NAV.AUTH)
+	}, [])
+
+	return <div>{/*<PlaceInfo/>*/}</div>
 }
 
 export default Main
