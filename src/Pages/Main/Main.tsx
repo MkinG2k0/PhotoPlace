@@ -6,8 +6,7 @@ function Main() {
 	return (
 		<div>
 			<Draggable />
-			{/*<PlaceInfo />*/}
-			{/*<MapWrap />*/}
+			<MapWrap />
 		</div>
 	)
 }
