@@ -9,7 +9,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 
 interface InfoAbPointProps {}
 
-export const PlaceInfo: FC<InfoAbPointProps> = ({}) => {
+export const PlaceInfo: FC<InfoAbPointProps> = (props: any) => {
 	const { currentPlace } = GetPlace()
 
 	if (!currentPlace) return null
@@ -17,6 +17,7 @@ export const PlaceInfo: FC<InfoAbPointProps> = ({}) => {
 	return (
 		<div className={style.wrap}>
 			<SwiperImg />
+
 			<div className={style.content}>
 				<HeadTitle />
 				<SwiperWrap />

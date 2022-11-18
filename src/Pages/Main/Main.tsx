@@ -1,10 +1,13 @@
 import { MapWrap } from 'Components/Map/Map'
+import { PlaceInfo } from 'Components/PlaceInfo/PlaceInfo'
+import { Draggable } from 'Components/Draggable/Draggable'
 
 function Main() {
 	return (
 		<div>
-			{/*<PlaceInfo/>*/}
-			<MapWrap />
+			<Draggable />
+			{/*<PlaceInfo />*/}
+			{/*<MapWrap />*/}
 		</div>
 	)
 }
