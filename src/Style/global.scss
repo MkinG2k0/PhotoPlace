@@ -4,6 +4,10 @@ body {
 	overflow: hidden;
 }
 
+a{
+	text-decoration: none;
+}
+
 *::-webkit-scrollbar {
 	width: 8px; /* ширина scrollbar */
 }

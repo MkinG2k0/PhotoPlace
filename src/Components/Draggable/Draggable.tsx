@@ -4,6 +4,7 @@ import style from './Draggable.module.scss'
 
 import { motion } from 'framer-motion'
 import { PlaceInfo } from 'Components/PlaceInfo/PlaceInfo'
+import {AllPlace} from "../AllPlace/AllPlace";
 
 interface DraggableProps {}
 
@@ -23,6 +24,7 @@ export const Draggable: FC<DraggableProps> = ({}) => {
 					onClick={() => setSwipe(!swipe)}
 				></motion.button>
 				<PlaceInfo />
+				<AllPlace />
 			</motion.div>
 		</>
 	)
